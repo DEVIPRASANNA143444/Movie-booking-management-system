@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - BookIt</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="admin-dashboard">
+    <nav>
+        <a href="index.html" class="logo">BookIt Admin.</a>
+        <ul class="nav-links" id="dynamic-nav-links"></ul>
+    </nav>
+
+    <div class="container">
+        <h2>Platform Overview</h2>
+        
+        <div class="admin-stats" style="margin-top: 20px;">
+            <div class="stat-card">
+                <h3>Total Bookings</h3>
+                <p id="total-bookings">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Revenue</h3>
+                <p id="total-revenue" style="color: var(--seat-available);">$0</p>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Add New Movie</h3>
+                <form id="add-movie-form" style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin-top: 15px;">
+                    <div class="form-group"><input type="text" id="m-title" required placeholder="Movie Title"></div>
+                    <div class="form-group"><input type="text" id="m-genre" required placeholder="Genre (e.g., Action)"></div>
+                    <div class="form-group"><input type="text" id="m-duration" required placeholder="Duration (e.g., 2h 30m)"></div>
+                    <div class="form-group"><input type="number" id="m-price" required placeholder="Ticket Price ($)" min="1"></div>
+                    <div class="form-group"><input type="url" id="m-poster" placeholder="Poster Image URL (Optional)"></div>
+                    <button type="submit" class="btn">Add to Database</button>
+                </form>
+            </div>
+
+            <div style="flex: 2; min-width: 300px; overflow-x: auto;">
+                <h3>Manage Catalog</h3>
+                <table id="admin-movies-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Genre</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 BookIt Admin Portal.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

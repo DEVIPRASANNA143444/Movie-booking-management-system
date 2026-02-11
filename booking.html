@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection - BookIt</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">BookIt.</a>
+        <ul class="nav-links" id="dynamic-nav-links"></ul>
+    </nav>
+
+    <div class="container booking-wrapper">
+        <h2 id="movie-name-display" style="margin-bottom: 20px;">Movie Name</h2>
+        
+        <ul class="showcase">
+            <li><div class="seat"></div> Available</li>
+            <li><div class="seat selected"></div> Selected</li>
+            <li><div class="seat occupied"></div> Occupied</li>
+        </ul>
+
+        <div class="screen-container">
+            <div class="screen"></div>
+            <p style="color: #666; font-size: 12px; margin-top: 10px;">SCREEN</p>
+        </div>
+
+        <div class="seat-grid" id="seat-grid">
+            </div>
+
+        <div class="booking-summary">
+            <p>You have selected <span id="count" style="color: var(--primary-color); font-weight: bold;">0</span> seats.</p>
+            <p>Total Price: $<span id="total" style="color: var(--seat-available); font-weight: bold;">0</span></p>
+            <button class="btn" style="width: 100%; margin-top: 15px;" onclick="confirmBooking()">Confirm Booking</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 BookIt App.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
